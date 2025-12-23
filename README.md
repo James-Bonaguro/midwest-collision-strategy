@@ -2,7 +2,7 @@ Midwest Collision Repair Strategy: GTM Validation Infographic
 
 A single-page interactive infographic validating a "Trusted Advisor" Go-To-Market strategy for the independent collision repair market in the US Midwest.
 
-[View Live Demo] (James-Bonaguro-midwest-collision-strategy)
+[View Live Demo](https://[username].github.io/midwest-collision-strategy/)
 
 🎯 Strategic Context
 
