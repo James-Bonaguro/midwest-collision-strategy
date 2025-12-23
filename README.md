@@ -1,65 +1,54 @@
-Midwest Collision Repair Strategy: GTM Validation Infographic
+Midwest Collision Repair Advisory: Strategic Thesis
 
-A single-page interactive infographic validating a "Trusted Advisor" Go-To-Market strategy for the independent collision repair market in the US Midwest.
+This repository contains the interactive market validation and Go-To-Market (GTM) strategy for my advisory practice targeting independent collision repair shop owners in the Midwest.
 
-[View Live Demo](https://[James-Bonaguro].github.io/midwest-collision-strategy/)
+[View Live Interactive Strategy](https://James-Bonaguro.github.io/midwest-collision-strategy/)
 
-🎯 Strategic Context
+🎯 The Objective
 
-This project visualizes market research data to validate an advisory business model targeting independent shop owners (revenue $500k-$5M) in IL, IN, WI, MI, and OH.
+I am building a specialized advisory firm for independent shop owners (revenue $500k-$5M) in IL, IN, WI, MI, and OH. This single-page application serves as a dynamic whitepaper, visualizing the data behind the business case.
 
-Key Hypotheses Validated:
+🧠 The Thesis
 
-The "Bleeding Neck" Problem: Labor shortages and succession planning are the top existential threats, outweighing operational issues.
+The industry is crowded with generic consultants, but there is a specific gap for "Insider" advisory. This strategy rests on three pillars validated in this visualization:
 
-The "Insider" Advantage: A founder with CCC Intelligent Solutions & dealership background has a distinct competitive advantage over generic consultants.
+The "Bleeding Neck" Problem: The data confirms that labor shortages (100k+ gap) and succession planning are existential threats for owners, far outweighing daily operational annoyances.
 
-The Model: A "Free Value" (Trojan Horse) approach using high-quality research briefs to build trust before paid advisory.
+The "Insider" Leverage: My background combining CCC Intelligent Solutions experience (software/data) with family dealership operations creates a unique "trust wedge" that generic consultants cannot replicate.
 
-📊 Visualizations Included
+The "Trojan Horse" GTM: A "give first" distribution model using high-value research briefs to build authority before offering paid advisory.
 
-Labor Market Forecast (2024-2028): Visualizing the 100k+ technician shortage (Chart.js Line).
+📊 Visualized Data
 
-Market Pressure: The squeeze of Independents vs. MSOs/PE (Chart.js Donut).
+The index.html file renders a dashboard validating:
 
-Pain Point Ranking: Weighted severity of business problems (Chart.js Horizontal Bar).
+Technician Shortage Forecast (2024-2028): The structural labor cliff.
 
-Channel Strategy: Effort vs. Impact analysis for outreach channels (Plotly.js Bubble Chart).
+Market Pressure: The consolidation squeeze (Independents vs. PE/MSOs).
 
-Strategy Roadmap: A visual flow from free briefs to paid advisory services.
+Pain Point Severity: Ranking business problems by urgency vs. annoyance.
+
+Channel Efficiency: An "Effort vs. Impact" analysis of where I will reach these owners.
 
 🛠 Tech Stack
 
-Single-File HTML: No build process required.
+Designed for zero-maintenance hosting and portability:
 
-Tailwind CSS (CDN): Responsive layout and "Vibrant Industrial" color palette.
+Single-File Architecture: No build steps, no frameworks.
 
-Chart.js (CDN): Canvas-based rendering for standard charts.
+Visualization: Chart.js (standard metrics) & Plotly.js (statistical analysis).
 
-Plotly.js (CDN): Advanced statistical plotting for channel analysis.
+Styling: Tailwind CSS (via CDN).
 
-No External Assets: All icons are Unicode; no SVGs or images to manage.
+Assets: Unicode icons (no SVG/image dependencies).
 
-🚀 Quick Start
+🚀 Deployment
 
-Clone the repository.
+This project is live via GitHub Pages.
+To run locally:
 
-Open market_strategy_infographic.html in any modern web browser.
+Clone the repo.
 
-No npm install or server required.
+Open index.html in any browser.
 
-🌐 Deployment (GitHub Pages)
-
-To host this live for free:
-
-Go to your GitHub repository Settings.
-
-Navigate to Pages on the left sidebar.
-
-Under Build and deployment, select Source -> Deploy from a branch.
-
-Select main (or master) as the branch and / (root) as the folder.
-
-Click Save. GitHub will generate a live URL for the infographic.
-
-Generated for strategic validation of Midwest Collision Repair GTM.
+Strategic Validation & GTM Planning Artifact.
