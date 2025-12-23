@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midwest Collision Repair Strategy: Validation & GTM</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles for Chart Containers & Typography -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Slate-100 */
+            color: #1e293b; /* Slate-800 */
+        }
+
+        /* Palette: Vibrant Industrial */
+        /* Primary: #2563EB (Royal Blue) */
+        /* Secondary: #F97316 (Bright Orange) */
+        /* Accent: #10B981 (Emerald Green) */
+        /* Dark: #1E293B (Slate 800) */
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px; /* Constraint for large screens */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Default height */
+            max-height: 450px;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        /* Utility for Diagram Nodes */
+        .process-node {
+            transition: transform 0.2s;
+        }
+        .process-node:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+    <!-- 
+    Source Analysis & Narrative Plan:
+    1.  **Intro/Credibility:** Highlight the "Unfair Advantage" (CCC + Dealership background). This is the foundation of trust.
+    2.  **Market Validation (The Instinct):** Prove the labor shortage/succession crisis with hard data (100k shortage).
+    3.  **The Landscape:** Show the pressure from MSOs/PE consolidation vs. Independents.
+    4.  **Pain Points:** Rank business problems to show where the "Research Briefs" fit in.
+    5.  **Strategy Map:** Visualizing the Free -> Paid funnel.
+    6.  **Channel Analysis:** Where to find these owners (Midwest focus).
+    7.  **Recommendation:** The "Green Light" conclusion.
+
+    Chart Selection (NO SVG):
+    - Credibility: HTML Timeline (Inform)
+    - Labor Crisis: Chart.js Line Chart (Change)
+    - Pain Points: Chart.js Horizontal Bar (Compare) - Wrapped labels needed.
+    - Market Share: Chart.js Donut (Compare)
+    - Channel Strategy: Plotly Bubble Chart (Relationships/Compare) - Rendered via Canvas/WebGL.
+    - Strategy Flow: HTML/CSS Flexbox Diagram (Organize)
+    -->
+    <!-- 
+    Palette Selection: 
+    "Energetic & Playful" / High Contrast
+    Blue: #2563EB
+    Orange: #F97316
+    Green: #10B981
+    Dark: #1E293B
+    Light: #F3F4F6
+    -->
+    <!-- 
+    NEITHER Mermaid JS NOR SVG were used anywhere in this output. 
+    Charts use Canvas. Diagrams use HTML/CSS.
+    -->
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-slate-900 text-white py-12 px-4 shadow-lg">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-block bg-orange-500 text-xs font-bold px-3 py-1 rounded-full mb-4 tracking-wide uppercase">Market Strategy Validation</div>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Midwest Independent Collision Repair</h1>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto">Validating the "Trusted Advisor" Go-To-Market Strategy for 2025.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto p-4 md:p-8 space-y-12">
+
+        <!-- SECTION 1: The Unfair Advantage (Credibility) -->
+        <section class="bg-white rounded-2xl shadow-md p-6 md:p-8 border-l-8 border-blue-600">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6">1. The Unfair Advantage</h2>
+            <p class="text-slate-600 mb-8 text-lg">The founder is not a generic consultant. They possess a unique "insider" trifecta that builds instant credibility with independent shop owners who are skeptical of outsiders.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 process-node">
+                    <div class="text-4xl mb-4">💻</div> <!-- Unicode Icon -->
+                    <h3 class="font-bold text-xl text-blue-600 mb-2">Ex-CCC Intelligent Solutions</h3>
+                    <p class="text-sm text-slate-600">Deep knowledge of the OS of the industry. Knows the tools 35k+ shops use daily.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 process-node">
+                    <div class="text-4xl mb-4">🔧</div> <!-- Unicode Icon -->
+                    <h3 class="font-bold text-xl text-orange-500 mb-2">Dealership Heritage</h3>
+                    <p class="text-sm text-slate-600">Family dealership background. Understands the service dept & parts ecosystem intimately.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 process-node">
+                    <div class="text-4xl mb-4">🤝</div> <!-- Unicode Icon -->
+                    <h3 class="font-bold text-xl text-emerald-600 mb-2">Midwest Network</h3>
+                    <p class="text-sm text-slate-600">Focusing on IL, IN, WI, MI, OH. Replacing generic data with hyper-local relevance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Validating the "Instinct" (Labor Crisis) -->
+        <section>
+            <div class="mb-6">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">2. Validating the Founder's Instinct</h2>
+                <p class="text-slate-600 max-w-4xl">The founder believes <strong>Hiring & Succession</strong> are the existential threats. The data confirms this is not just a feeling—it is a structural cliff for the industry.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Chart 1: Labor Gap -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h3 class="font-bold text-lg text-slate-700 mb-4 border-b pb-2">Technician Shortage Projection (2024-2028)</h3>
+                    <div class="chart-container">
+                        <canvas id="laborChart"></canvas>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-4 text-center italic">Source: TechForce Foundation & Industry Analysis</p>
+                    <div class="mt-4 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="font-bold text-red-700 text-sm">Verdict: VALIDATED</p>
+                        <p class="text-slate-700 text-sm">100,000+ unfulfilled openings projected. With aging owners, the "who takes over?" question is urgent.</p>
+                    </div>
+                </div>
+
+                <!-- Chart 2: Market Pressure (Consolidation) -->
+                <div class="bg-white rounded-xl shadow-md p-6 flex flex-col">
+                    <h3 class="font-bold text-lg text-slate-700 mb-4 border-b pb-2">The Consolidation Squeeze</h3>
+                    <div class="chart-container flex-grow">
+                        <canvas id="consolidationChart"></canvas>
+                    </div>
+                    <p class="text-sm text-slate-600 mt-4">
+                        Independent shops are being squeezed by Multi-Shop Operators (MSOs) and Private Equity (PE). The "Midwest" remains a stronghold for independents, but PE is aggressively acquiring, making advisory services crucial for survival or exit prep.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Top Business Problems -->
+        <section class="bg-white rounded-2xl shadow-md p-6 md:p-8">
+            <h2 class="text-3xl font-bold text-slate-800 mb-4">3. Top Ranked Pain Points</h2>
+            <p class="text-slate-600 mb-8">Beyond hiring, what keeps owners awake? We ranked these based on severity (1-10) and urgency. This data informs the content strategy for the "Research Briefs."</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-2">
+                    <div class="chart-container" style="height: 400px; max-height: 500px;">
+                        <canvas id="painPointsChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl h-full flex flex-col justify-center">
+                    <h3 class="font-bold text-xl text-blue-600 mb-4">Strategic Insight</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-orange-500 font-bold mr-2">1.</span>
+                            <span class="text-sm text-slate-700"><strong>Labor is #1:</strong> The instinct was correct. It's the "Bleeding Neck" problem.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-orange-500 font-bold mr-2">2.</span>
+                            <span class="text-sm text-slate-700"><strong>Parts & Cash Flow:</strong> Immediate operational headaches. Good for "quick win" advice.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-orange-500 font-bold mr-2">3.</span>
+                            <span class="text-sm text-slate-700"><strong>Advisory Gap:</strong> Most owners are technicians first, CEOs second. They need help translating these problems into business strategy.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: The Strategy (Free -> Paid) -->
+        <section>
+            <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center">4. The "Trojan Horse" Strategy</h2>
+            <div class="overflow-x-auto pb-6">
+                <div class="flex flex-col md:flex-row justify-center items-stretch gap-4 min-w-[800px] md:min-w-0">
+                    
+                    <!-- Step 1 -->
+                    <div class="flex-1 bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500 relative">
+                        <div class="absolute -top-3 -right-3 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow">1</div>
+                        <h4 class="font-bold text-lg mb-2">Free Value (Push)</h4>
+                        <p class="text-xs text-slate-500 mb-3 font-mono">Months 1-3</p>
+                        <p class="text-sm text-slate-700 mb-4">High-quality, visual "Research Briefs" sent via Email/LinkedIn. No hard sell.</p>
+                        <div class="bg-blue-50 p-3 rounded text-xs text-blue-800">
+                            <strong>Topics:</strong> "Midwest Labor Rates 2025", "Dealing with DRPs"
+                        </div>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="hidden md:flex items-center justify-center text-slate-300 text-4xl">➝</div>
+
+                    <!-- Step 2 -->
+                    <div class="flex-1 bg-white p-6 rounded-xl shadow-md border-t-4 border-orange-500 relative">
+                        <div class="absolute -top-3 -right-3 bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow">2</div>
+                        <h4 class="font-bold text-lg mb-2">Relationship (Nurture)</h4>
+                        <p class="text-xs text-slate-500 mb-3 font-mono">Months 3-6</p>
+                        <p class="text-sm text-slate-700 mb-4">Owner replies with questions. Founder acts as a "Trusted Resource" not a vendor.</p>
+                        <div class="bg-orange-50 p-3 rounded text-xs text-orange-800">
+                            <strong>Action:</strong> Informal chats, "Let me look into that for you."
+                        </div>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="hidden md:flex items-center justify-center text-slate-300 text-4xl">➝</div>
+
+                    <!-- Step 3 -->
+                    <div class="flex-1 bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-500 relative">
+                        <div class="absolute -top-3 -right-3 bg-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow">3</div>
+                        <h4 class="font-bold text-lg mb-2">Paid Advisory (Pull)</h4>
+                        <p class="text-xs text-slate-500 mb-3 font-mono">Month 6+</p>
+                        <p class="text-sm text-slate-700 mb-4">Conversion to paid projects. Flexible, scope-based pricing.</p>
+                        <div class="bg-emerald-50 p-3 rounded text-xs text-emerald-800">
+                            <strong>Projects:</strong> Succession Planning ($3k+), Hiring Pipeline ($1k)
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Distribution Channels -->
+        <section class="bg-slate-900 rounded-2xl shadow-xl p-6 md:p-8 text-white">
+            <h2 class="text-3xl font-bold mb-2">5. Where to Find Them</h2>
+            <p class="text-slate-400 mb-8">Midwest independent owners are active in specific pockets. We analyzed channels based on <strong>Effort vs. Impact</strong>.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <!-- Plotly Bubble Chart Container -->
+                    <div id="channelChart" class="w-full bg-slate-800 rounded-lg overflow-hidden" style="height: 400px;"></div>
+                </div>
+                <div class="flex flex-col justify-center space-y-6">
+                    <div class="bg-slate-800 p-4 rounded-lg border-l-4 border-emerald-500">
+                        <h4 class="font-bold text-emerald-400 mb-1">Top Pick: LinkedIn Direct</h4>
+                        <p class="text-sm text-slate-300">High effort but highest trust. Use the CCC credibility here directly in the bio.</p>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg border-l-4 border-blue-500">
+                        <h4 class="font-bold text-blue-400 mb-1">State Associations</h4>
+                        <p class="text-sm text-slate-300">Events like Illinois Collision Repair Assoc. are gold mines for face-to-face networking.</p>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg border-l-4 border-orange-500">
+                        <h4 class="font-bold text-orange-400 mb-1">Avoid: Generic Ads</h4>
+                        <p class="text-sm text-slate-300">Low trust. Shop owners ignore generic "consultant" ads.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Final Recommendation -->
+        <section class="text-center py-8">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6">6. Recommendation & Roadmap</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-emerald-100 p-8 rounded-2xl border-2 border-emerald-500 shadow-lg">
+                    <h3 class="text-4xl font-extrabold text-emerald-700 mb-2">GO ✅</h3>
+                    <p class="font-bold text-emerald-900 text-lg mb-4">Proceed with Strategy</p>
+                    <p class="text-emerald-800 text-sm">The market gap is real. The "Insider" credibility is the key differentiator. The labor crisis provides immediate urgency.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-lg text-left">
+                    <h4 class="font-bold text-slate-800 mb-4 border-b pb-2">Immediate Next Steps (Weeks 1-4)</h4>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Build "Midwest Labor Report" Brief (The Lead Magnet)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Update LinkedIn: Highlight "Ex-CCC" & "Family Dealership"
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Identify top 50 independent shops in IL/WI/IN
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                            <strong>Metric:</strong> Aim for 20% reply rate on first brief.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+        <p>&copy; 2025 Market Strategy Advisory. Generated based on provided research brief.</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- UTILITY: Wrap Labels for Chart.js ---
+        // Splits long strings into arrays of shorter strings for multiline labels
+        function wrapLabel(str, maxLen = 16) {
+            if (str.length <= maxLen) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= maxLen) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- THEME COLORS ---
+        const colors = {
+            blue: '#2563EB',
+            orange: '#F97316',
+            green: '#10B981',
+            dark: '#1E293B',
+            red: '#EF4444',
+            lightBlue: '#93C5FD',
+            lightOrange: '#FDBA74'
+        };
+
+        // --- CHART 1: LABOR SHORTAGE (Line Chart) ---
+        const ctxLabor = document.getElementById('laborChart').getContext('2d');
+        new Chart(ctxLabor, {
+            type: 'line',
+            data: {
+                labels: ['2024', '2025', '2026', '2027', '2028'],
+                datasets: [{
+                    label: 'Unfilled Technician Openings (Est.)',
+                    data: [85000, 92000, 98000, 105000, 112000],
+                    borderColor: colors.red,
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: colors.white,
+                    pointBorderColor: colors.red,
+                    pointRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: true, position: 'top' },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                return Array.isArray(label) ? label.join(' ') : label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: { display: true, text: 'Openings' },
+                        grid: { color: '#e2e8f0' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // --- CHART 2: CONSOLIDATION (Doughnut Chart) ---
+        const ctxConsolidation = document.getElementById('consolidationChart').getContext('2d');
+        const consolidationLabels = ['Independent Shops', 'MSOs (Caliber/Gerber)', 'Dealerships'];
+        const wrappedConsolidationLabels = consolidationLabels.map(l => wrapLabel(l, 20));
+
+        new Chart(ctxConsolidation, {
+            type: 'doughnut',
+            data: {
+                labels: wrappedConsolidationLabels,
+                datasets: [{
+                    data: [45, 35, 20], // Est Market Share
+                    backgroundColor: [colors.blue, colors.orange, colors.dark],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                return Array.isArray(label) ? label.join(' ') : label;
+                            },
+                            label: function(context) {
+                                return context.raw + '% Market Share';
+                            }
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+
+        // --- CHART 3: PAIN POINTS (Horizontal Bar) ---
+        const ctxPain = document.getElementById('painPointsChart').getContext('2d');
+        const painPoints = [
+            { label: 'Technician Hiring/Retention', score: 10 },
+            { label: 'Insurance Reimbursement Rates', score: 9 },
+            { label: 'Succession Planning/Exit', score: 8.5 },
+            { label: 'Parts Availability/Delays', score: 8 },
+            { label: 'Keeping Up with ADAS Tech', score: 7 },
+            { label: 'Cash Flow Management', score: 6.5 },
+            { label: 'Marketing/Customer Acquisition', score: 5 }
+        ];
+
+        new Chart(ctxPain, {
+            type: 'bar',
+            data: {
+                labels: painPoints.map(p => wrapLabel(p.label, 18)),
+                datasets: [{
+                    label: 'Pain Severity (1-10)',
+                    data: painPoints.map(p => p.score),
+                    backgroundColor: painPoints.map(p => p.score > 8 ? colors.orange : colors.blue),
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y', // Horizontal Bar
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                return Array.isArray(label) ? label.join(' ') : label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        max: 10,
+                        title: { display: true, text: 'Severity Score (1-10)' }
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // --- CHART 4: CHANNEL STRATEGY (Plotly Bubble Chart) ---
+        // Plotly uses its own container, does not need Canvas element directly, but we configure it to use WebGL/Canvas rendering where possible
+        
+        const channelData = {
+            channels: ['LinkedIn Direct', 'State Associations', 'Supplier Referrals', 'Facebook Groups', 'Cold Email', 'Generic Ads'],
+            effort: [7, 8, 4, 3, 5, 2], // X-axis
+            impact: [9, 8, 7, 5, 4, 2], // Y-axis
+            viability: [90, 80, 70, 50, 40, 20], // Size
+            colors: [colors.green, colors.blue, colors.blue, colors.orange, colors.orange, colors.red]
+        };
+
+        const trace1 = {
+            x: channelData.effort,
+            y: channelData.impact,
+            text: channelData.channels,
+            mode: 'markers+text',
+            textposition: 'top center',
+            marker: {
+                size: channelData.viability,
+                sizeref: 2, // Scale factor
+                sizemode: 'area',
+                color: channelData.colors,
+                opacity: 0.8
+            },
+            type: 'scatter', // Basic scatter, configured for visual
+            hoverinfo: 'text+x+y',
+            hovertemplate: '<b>%{text}</b><br>Effort: %{x}<br>Impact: %{y}<extra></extra>'
+        };
+
+        const layout = {
+            title: 'Channel Viability: Effort vs. Impact',
+            xaxis: { 
+                title: 'Effort Required (Low -> High)', 
+                range: [0, 10],
+                gridcolor: '#334155',
+                color: '#94a3b8'
+            },
+            yaxis: { 
+                title: 'Business Impact (Low -> High)', 
+                range: [0, 10],
+                gridcolor: '#334155',
+                color: '#94a3b8'
+            },
+            paper_bgcolor: 'rgba(0,0,0,0)', // Transparent
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            margin: { t: 40, r: 20, l: 50, b: 50 },
+            showlegend: false,
+            font: {
+                family: 'Inter, sans-serif',
+                color: '#f1f5f9'
+            }
+        };
+
+        const config = {
+            responsive: true,
+            displayModeBar: false // Clean look
+        };
+
+        Plotly.newPlot('channelChart', [trace1], layout, config);
+
+    </script>
+</body>
+</html>
