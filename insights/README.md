@@ -16,7 +16,7 @@ Each page stands alone and is intended for external sharing.
 An interactive, data-backed narrative explaining why many independent collision repair shops are facing cash flow and solvency pressure despite stable demand.
 
 🔗 **Live page:**  
-[Midwest Collision Strategy](https://<James-Bonaguro>.github.io/midwest-collision-strategy/insights/capacity-to-solvency.html)
+https://james-bonaguro.github.io/midwest-collision-strategy/insights/capacity-to-solvency.html
 
 ---
 
