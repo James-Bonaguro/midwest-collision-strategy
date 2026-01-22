@@ -11,13 +11,13 @@ Each page stands alone and is intended for external sharing.
 
 From backlog-driven growth to margin-driven failure An interactive, data-backed narrative explaining why many independent collision repair shops are facing cash flow and solvency pressure despite stable demand.
 
-🔗 Live page: View Report
+🔗 Live page: [View Report](https://james-bonaguro.github.io/midwest-collision-strategy/insights/capacity-to-solvency.html)
 
 2. Infographic One-Pager
 
 Printable Executive Summary A high-contrast, single-page summary of the capacity-to-solvency shift. Designed for print (8.5x11) or email attachment.
 
-🔗 Live page: View Infographic
+🔗 Live page: [View Infographic](https://james-bonaguro.github.io/midwest-collision-strategy/insights/infographic.html)
 
 Notes
 
